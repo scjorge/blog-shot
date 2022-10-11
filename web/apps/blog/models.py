@@ -20,4 +20,4 @@ class Post(Base):
 
 class Category(Base):
     title = models.CharField(max_length=100)
-    posts = models.ManyToManyField(to="Post", related_name="category")
+    post = models.ManyToManyField(to="Post", related_name="category")
