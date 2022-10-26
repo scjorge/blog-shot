@@ -17,7 +17,11 @@ class Post(Base):
     content = models.TextField(blank=True, null=True)
     author = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
 
+    def __str__(self) -> str:
+        return self.title()
 
 class Category(Base):
     title = models.CharField(max_length=100)
     post = models.ManyToManyField(to="Post", related_name="category")
+
+
