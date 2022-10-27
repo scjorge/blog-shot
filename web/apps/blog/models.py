@@ -1,5 +1,4 @@
 from django.db import models
-
 from apps.user.models import UserProfile
 
 
@@ -19,6 +18,7 @@ class Post(Base):
 
     def __str__(self) -> str:
         return self.title()
+    
 
 class Category(Base):
     title = models.CharField(max_length=100)
