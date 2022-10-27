@@ -18,10 +18,8 @@ class Post(Base):
 
     def __str__(self) -> str:
         return self.title()
-    
+
 
 class Category(Base):
     title = models.CharField(max_length=100)
     post = models.ManyToManyField(to="Post", related_name="category")
-
-
